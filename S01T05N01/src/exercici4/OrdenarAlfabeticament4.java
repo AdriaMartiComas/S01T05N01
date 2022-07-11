@@ -1,4 +1,4 @@
-package exercici3;
+package exercici4;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,16 +15,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class OrdenarAlfabeticament3 {
+public class OrdenarAlfabeticament4 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<String> output = new ArrayList<String>();
+		ArrayList<String> input = new ArrayList<String>();
 		System.out.println("Escriu la ruta de la carpeta que vols mostrar l'arbre:");
 
 		String path = sc.nextLine();
-		sc.close();
 
 		arbreDirectorisToTxt(path, output);
+		importText(input, path);
+
+		sc.close();
 
 	}
 
@@ -93,16 +96,20 @@ public class OrdenarAlfabeticament3 {
 		System.out.println(dateFormat.format(fileTime.toMillis()));
 	}
 
-	public static void importText(ArrayList<String> llista) {
+	public static void importText(ArrayList<String> input, String path) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("escriu el nom del fitxer que vols mostrar dins del directori sel.leccionat previament");
+		String fitxerTxt = sc.nextLine();
+		sc.close();
 
 		try {
-			BufferedReader inputText = new BufferedReader(
-					new FileReader("/users/adriamarticomas/git/S01T05N01/S01T05N01/src/dir.txt"));
+			BufferedReader inputText = new BufferedReader(new FileReader(path + "/" + fitxerTxt));
 			String linea;
 
 			while ((linea = inputText.readLine()) != null) {
 
-				llista.add(linea.toString());
+				input.add(linea.toString());
 
 			}
 			inputText.close();
@@ -110,6 +117,15 @@ public class OrdenarAlfabeticament3 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		for (String i : input) {
+			System.out.println(i);
+		}
 	}
 
 }
+
+/*
+ * Afegeix la funcionalitat de llegir qualsevol fitxer TXT i mostra el seu
+ * contingut per consola.
+ */

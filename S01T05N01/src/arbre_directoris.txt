@@ -1,12 +1,21 @@
 
+            SRC
+            File: .DS_Store - 2022-07-11T09:14:28Z
+            File: arbre_directoris.txt - 2022-07-11T09:14:28Z
+            File: dir.txt - 2022-07-11T09:14:28Z
+            Directory: exercici1 - 2022-07-11T09:14:28Z
+            Directory: exercici2 - 2022-07-11T09:14:28Z
+            Directory: exercici3 - 2022-07-11T09:14:28Z
+            Directory: exercici4 - 2022-07-11T09:14:28Z
+
           S01T05N01
-          File: .DS_Store - 2022-07-11T09:08:38Z
-          File: .classpath - 2022-07-11T09:08:38Z
-          File: .gitignore - 2022-07-11T09:08:38Z
-          File: .project - 2022-07-11T09:08:38Z
-          Directory: .settings - 2022-07-11T09:08:38Z
-          Directory: bin - 2022-07-11T09:08:38Z
-          Directory: src - 2022-07-11T09:08:38Z
+          File: .DS_Store - 2022-07-11T09:36:14Z
+          File: .classpath - 2022-07-11T09:36:14Z
+          File: .gitignore - 2022-07-11T09:36:14Z
+          File: .project - 2022-07-11T09:36:14Z
+          Directory: .settings - 2022-07-11T09:36:14Z
+          Directory: bin - 2022-07-11T09:36:14Z
+          Directory: src - 2022-07-11T09:36:14Z
 
         S01T05N01
         Directory: .git - 2022-07-07T10:57:08Z
