@@ -27,7 +27,7 @@ public class OrdenarAlfabeticament {
 	public static void importText(ArrayList<String> llista) {
 
 		try {
-			BufferedReader inputText = new BufferedReader(new FileReader("dir.txt"));
+			BufferedReader inputText = new BufferedReader(new FileReader("/users/adriamarticomas/git/S01T05N01/S01T05N01/src/dir.txt"));
 			String linea;
 
 			while ((linea = inputText.readLine()) != null) {

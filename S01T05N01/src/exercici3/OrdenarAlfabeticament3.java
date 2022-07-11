@@ -1,8 +1,10 @@
-package exercici2;
+package exercici3;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,37 +16,58 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class OrdenarAlfabeticament {
-
+public class OrdenarAlfabeticament3 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		ArrayList<String> output = new ArrayList<String>();
 		System.out.println("Escriu la ruta de la carpeta que vols mostrar l'arbre:");
 
 		String path = sc.nextLine();
 		sc.close();
 
-		arbreDirectoris(path);
-
-		ArrayList<String> llista = new ArrayList<String>();
-
-		importText(llista);
-		System.out.println(llista);
-
-		Collections.sort(llista);
-		System.out.println(llista);
+		arbreDirectorisToTxt(path, output);
 
 	}
 
-	public static void mostrarArxius(String path) {
+	public static void arbreDirectorisToTxt(String path, ArrayList<String> output) {
+		File file = new File(path);
+
+		mostrarArxiusTxt(path, output);
+		String parentFolder = file.getParent();
+
+		if (parentFolder.equals("/")) {
+			output.add("\nROOT");
+
+			try {
+				BufferedWriter sortida = new BufferedWriter(new FileWriter("arbre_directoris.txt"));
+
+				for (String o : output) {
+					sortida.write(o);
+				}
+				sortida.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+
+			arbreDirectorisToTxt(parentFolder, output);
+
+		}
+
+	}
+
+	public static void mostrarArxiusTxt(String path, ArrayList<String> output) {
 		File file = new File(path);
 		File folder[] = file.listFiles();
 		FileTime fileTime = null;
 		int nivell = path.length() - path.replace("/", "").length();
 		String espaiEsquerra = new String(new char[nivell * 2]).replace('\0', ' ');
 		Path path2 = Paths.get(path);
+		String print = "";
 
 		Arrays.sort(folder);
-		System.out.println("\n" + espaiEsquerra + file.getName().toUpperCase() + "\n");
+		print = print + "\n" + espaiEsquerra + file.getName().toUpperCase() + "\n";
 
 		for (File f : folder) {
 			try {
@@ -54,14 +77,16 @@ public class OrdenarAlfabeticament {
 				System.err.println("Cannot get the last modified time - " + e);
 			}
 			if (f.isFile()) {
-				
-				System.out.println(espaiEsquerra + "File: " + f.getName() +" - "+ fileTime);
+
+				print = print + espaiEsquerra + "File: " + f.getName() + " - " + fileTime + "\n";
 			} else if (f.isDirectory()) {
-				System.out.println(espaiEsquerra + "Directory: " + f.getName()+" - "+ fileTime);
+				print = print + espaiEsquerra + "Directory: " + f.getName() + " - " + fileTime + "\n";
 			} else {
-				System.out.println(espaiEsquerra + "Not Know:" + f.getName()+" - "+ fileTime);
+				print = print + espaiEsquerra + "Not Know:" + f.getName() + " - " + fileTime + "\n";
 			}
 		}
+		output.add(print);
+
 	}
 
 	public static void printFileTime(FileTime fileTime) {
@@ -69,25 +94,11 @@ public class OrdenarAlfabeticament {
 		System.out.println(dateFormat.format(fileTime.toMillis()));
 	}
 
-	public static void arbreDirectoris(String path) {
-		File file = new File(path);
-
-		mostrarArxius(path);
-		String parentFolder = file.getParent();
-		
-		if (parentFolder.equals("/")) {
-			System.out.println("\nROOT");
-		} else {
-			arbreDirectoris(parentFolder);
-
-		}
-
-	}
-
 	public static void importText(ArrayList<String> llista) {
 
 		try {
-			BufferedReader inputText = new BufferedReader(new FileReader("/users/adriamarticomas/git/S01T05N01/S01T05N01/src/dir.txt"));
+			BufferedReader inputText = new BufferedReader(
+					new FileReader("/users/adriamarticomas/git/S01T05N01/S01T05N01/src/dir.txt"));
 			String linea;
 
 			while ((linea = inputText.readLine()) != null) {
@@ -103,13 +114,3 @@ public class OrdenarAlfabeticament {
 	}
 
 }
-
-/*
- * Afegeix a la classe de l’exercici anterior, la funcionalitat de llistar un
- * arbre de directoris amb el contingut de tots els seus nivells (recursivament)
- * de manera que s'imprimeixin en pantalla en ordre alfabètic dins de cada
- * nivell, indicant a més si és un directori (D) o un fitxer (F), i la seva
- * última data de modificació.
- * 
- * 
- */

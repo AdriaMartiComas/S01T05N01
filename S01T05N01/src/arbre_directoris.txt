@@ -1,0 +1,66 @@
+
+          S01T05N01
+          File: .DS_Store - 2022-07-11T09:08:38Z
+          File: .classpath - 2022-07-11T09:08:38Z
+          File: .gitignore - 2022-07-11T09:08:38Z
+          File: .project - 2022-07-11T09:08:38Z
+          Directory: .settings - 2022-07-11T09:08:38Z
+          Directory: bin - 2022-07-11T09:08:38Z
+          Directory: src - 2022-07-11T09:08:38Z
+
+        S01T05N01
+        Directory: .git - 2022-07-07T10:57:08Z
+        Directory: S01T05N01 - 2022-07-07T10:57:08Z
+
+      GIT
+      File: .DS_Store - 2022-07-07T10:55:13Z
+      File: Prueba.class - 2022-07-07T10:55:13Z
+      File: Prueba.java - 2022-07-07T10:55:13Z
+      Directory: S01T01N01MartiComasAdria - 2022-07-07T10:55:13Z
+      Directory: S01T02N01 - 2022-07-07T10:55:13Z
+      Directory: S01T03N01MartiComasAdria - 2022-07-07T10:55:13Z
+      Directory: S01T05N01 - 2022-07-07T10:55:13Z
+      Directory: S01T05N01MartiComasAdria - 2022-07-07T10:55:13Z
+
+    ADRIAMARTICOMAS
+    File: .CFUserTextEncoding - 2022-07-08T07:41:28Z
+    File: .DS_Store - 2022-07-08T07:41:28Z
+    Directory: .Trash - 2022-07-08T07:41:28Z
+    File: .bash_history - 2022-07-08T07:41:28Z
+    File: .bash_profile - 2022-07-08T07:41:28Z
+    File: .bash_profile.swo - 2022-07-08T07:41:28Z
+    File: .bash_profile.swp - 2022-07-08T07:41:28Z
+    Directory: .bash_sessions - 2022-07-08T07:41:28Z
+    Directory: .cache - 2022-07-08T07:41:28Z
+    Directory: .config - 2022-07-08T07:41:28Z
+    Directory: .eclipse - 2022-07-08T07:41:28Z
+    Directory: .fnmt - 2022-07-08T07:41:28Z
+    Directory: .m2 - 2022-07-08T07:41:28Z
+    Directory: .oracle_jre_usage - 2022-07-08T07:41:28Z
+    Directory: .p2 - 2022-07-08T07:41:28Z
+    Directory: .sobres - 2022-07-08T07:41:28Z
+    File: .viminfo - 2022-07-08T07:41:28Z
+    Directory: .vscode - 2022-07-08T07:41:28Z
+    Directory: Applications - 2022-07-08T07:41:28Z
+    Directory: Desktop - 2022-07-08T07:41:28Z
+    Directory: Documents - 2022-07-08T07:41:28Z
+    Directory: Downloads - 2022-07-08T07:41:28Z
+    Directory: Library - 2022-07-08T07:41:28Z
+    Directory: Movies - 2022-07-08T07:41:28Z
+    Directory: Music - 2022-07-08T07:41:28Z
+    Directory: Pictures - 2022-07-08T07:41:28Z
+    Directory: Public - 2022-07-08T07:41:28Z
+    Directory: RAINFROG_RECORDING Project - 2022-07-08T07:41:28Z
+    Directory: caixa forum Project - 2022-07-08T07:41:28Z
+    Directory: eclipse - 2022-07-08T07:41:28Z
+    Directory: eclipse-workspace - 2022-07-08T07:41:28Z
+    Directory: eclipse-workspace-itinerari - 2022-07-08T07:41:28Z
+    Directory: git - 2022-07-08T07:41:28Z
+
+  USERS
+  File: .localized - 2021-04-18T11:14:53Z
+  Directory: Guest - 2021-04-18T11:14:53Z
+  Directory: Shared - 2021-04-18T11:14:53Z
+  Directory: adriamarticomas - 2021-04-18T11:14:53Z
+
+ROOT
